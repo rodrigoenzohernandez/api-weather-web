@@ -1,6 +1,6 @@
 # api-weather
 
-Es una aplicación web de consulta de cliuma que permite visualizar el pronostico actual y los próximos 5 días, tanto para la ciudad actual (determinada a partir de la IP del cliente), como para otras 5 ciudades seleccionables.
+Es una aplicación web de consulta de clima que permite visualizar el pronostico actual y los próximos 5 días, tanto para la ciudad actual (determinada a partir de la IP del cliente), como para otras 5 ciudades seleccionables.
 
 ## Comenzando 🚀
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
