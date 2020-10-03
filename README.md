@@ -11,7 +11,7 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 * Conexión a internet
 * Descargar el proyecto
 ```
-git clone xxx
+git clone https://github.com/rodrigoenzohernandez/api-weather-web.git
 ```
 
 ### Instalación 🔧
@@ -38,7 +38,7 @@ Ya podes usar la web! Por defecto se carga la el pronóstico del lugar en el que
 
 Podes seleciconar cualquiera de las 5 ciudades en al lista y presionar "Consultar".
 
-![Pagina principal](/images/img-for-readme.PNG "api-weather")
+![Pagina principal](https://raw.githubusercontent.com/rodrigoenzohernandez/api-weather-web/master/api-weather/public/images/img-for-readme.PNG "api-weather")
 
 
 ## Ejecutando las pruebas ⚙️
