@@ -1,13 +1,13 @@
 const controller = {
     showCurrent: function (req, res) {
-        searchWeather(res, req.params.city, "weather");
+        searchWeather(req, res, req.params.city, "weather");
     },
     showForecast: async function (req, res) {
-        searchWeather(res, req.params.city, "forecast");
+        searchWeather(req, res, req.params.city, "forecast");
     }
 }
 
-async function searchWeather(res, cityParam, type) {
+async function searchWeather(req, res, cityParam, type) {
     try {
         let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
         var geoip = require('geoip-lite');
