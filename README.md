@@ -10,15 +10,19 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 * Tener instalado [NodeJS](https://nodejs.org/es/)
 * Conexión a internet
 * Descargar el proyecto
+
 ```
 git clone https://github.com/rodrigoenzohernandez/api-weather-web.git
 ```
+
+* Estar registrado en Heroku (_Si es usuario gratuito, tener menos de 5 proyectos creados_)
+* Tener instalado [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
 ### Instalación 🔧
 
 Ingresar al directorio del proyecto:
 ```
-cd api-weather
+cd api-weather-web
 ```
 
 Instalar las dependencias:
@@ -26,13 +30,26 @@ Instalar las dependencias:
 npm install
 ```
 
-Ejecutar el script para el despliegue en localhost. Puerto 3000 por defecto.
-_Es posible cambiarlo en /bin/www editando la propiedad normalizePort._
+Iniciar sesion en heroku:
 ```
-npm start
+heroku login
+```
+Crear un nuevo proyecto en Heroku
+
+```
+heroku create
+```
+Pushear los cambios al repod e Heroku
+```
+git push heroku master
+```
+_Si no funciona el deploy, puede que sea necesario apuntar hacia el repo de Heroku_
+
+```
+heroku git:remote -a herokuAppName
 ```
 
-Ingresar en el navegador el siguiente [link](http://localhost:3000/).
+Ingresar al link que genera el deploy.
 
 Ya podes usar la web! Por defecto se carga la el pronóstico del lugar en el que te encontras (en base a tu IP publica).
 
@@ -109,4 +126,4 @@ Al finalizar se mostrará un resumen indicando pruebas totales, correctas e inco
 * [axios](https://desarrolloweb.com/articulos/axios-ajax-cliente-http-javascript.html) - Cliente HTTP basado en promesas para JavaScript
 * [npm](https://www.npmjs.com/) - Manejador de paquetes
 * [weather-API](https://openweathermap.org/api) - API que brinda la información sobre el clima.
-* [MYIP-API](https://www.myip.com/api-docs/) - API que deuvelve información sobre la IP publica.
+* [GitFlow](https://www.gitflow.com/) - Flujo de trabajo de git.
