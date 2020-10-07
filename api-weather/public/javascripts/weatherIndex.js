@@ -1,3 +1,5 @@
+var currentURL = window.location;
+
 getCurrent();
 getForecast();
 
@@ -5,7 +7,7 @@ function getCurrent() {
 	var citySelector = document.querySelector('#city-selector')
 	var ciudad = citySelector.value
 	var contenido = document.querySelector('#contenido')
-	axios.get('http://localhost:3000/current/' + ciudad)
+	axios.get(currentURL + 'current/' + ciudad)
 		.then(function (response) {
 			let current = response.data;
 			if (current.cod != 404) {
@@ -36,7 +38,7 @@ var contenido = document.querySelector('#contenido')
 function getForecast() {
 	var citySelector = document.querySelector('#city-selector')
 	var ciudad = citySelector.value
-	axios.get('http://localhost:3000/forecast/' + ciudad)
+	axios.get(currentURL + 'forecast/' + ciudad)
 		.then(function (response) {
 			let forecast = response.data;
 			if (forecast.cod != 51451) {
@@ -67,10 +69,10 @@ function getForecast() {
 }
 
 function searchWeather() {
- 	var myNode = document.getElementById("main-forecast");
+	var myNode = document.getElementById("main-forecast");
 	while (myNode.firstChild) {
 		myNode.removeChild(myNode.firstChild);
-	} 
+	}
 	getCurrent();
 	getForecast();
 }  
