@@ -6,7 +6,6 @@ getForecast();
 function getCurrent() {
 	var citySelector = document.querySelector('#city-selector')
 	var ciudad = citySelector.value
-	var contenido = document.querySelector('#contenido')
 	axios.get(currentURL + 'current/' + ciudad)
 		.then(function (response) {
 			let current = response.data;
@@ -17,7 +16,7 @@ function getCurrent() {
 				<img src="http://openweathermap.org/img/wn/${current.weather[0].icon}.png" alt="">
 				<div><p><strong> Temperatura actual </strong> ${current.main.temp}°C</p></div>
 				<div><p><strong> Temperatura minima </strong> ${current.main.temp_min} °C</p></div>
-				<div><p><strong> Temperatura maxima </strong>${current.main.temp_min} °C</p></div>	
+				<div><p><strong> Temperatura maxima </strong>${current.main.temp_max} °C</p></div>	
 				</div>
 				`
 			}
