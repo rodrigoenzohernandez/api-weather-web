@@ -2,10 +2,11 @@ const controller = {
     showLocation: async function (req, res) {
         try {
             var geoip = require('geoip-lite');
-            const ipFromRequest = requestIp.getClientIp(req).split(':').slice(-1).pop()
-              res.send(ipFromRequest)
+     
+            let ip = req.headers['x-real-ip'];
+            return res.send(ip);
             //let cityData = geoip.lookup(ip);
-            return res.json(cityData);
+            //return res.json(cityData);
         }
         catch (err) {
             console.log(err);
