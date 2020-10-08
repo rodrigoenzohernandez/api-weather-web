@@ -3,7 +3,7 @@ const controller = {
         try {
             var geoip = require('geoip-lite');
      
-            let ip = req.headers['x-real-ip'];
+            let ip = req.ip;;
             //return res.send(ip);
             let cityData = geoip.lookup(ip);
             return res.json(cityData);
