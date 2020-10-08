@@ -55,7 +55,45 @@ Ya podes usar la web! Por defecto se carga la el pronóstico del lugar en el que
 
 Podes seleciconar cualquiera de las 5 ciudades en al lista y presionar "Consultar".
 
-![Pagina principal](https://raw.githubusercontent.com/rodrigoenzohernandez/api-weather-web/master/api-weather/public/images/img-for-readme.PNG "api-weather")
+[Pagina principal](https://raw.githubusercontent.com/rodrigoenzohernandez/api-weather-web/master/public/images/img-for-readme.PNG)
+
+## Ambientes 
+
+### Producción
+
+Se realiza el deploy automático en Heroku por cada push a master.
+
+[Produccion](https://api-weather-web.herokuapp.com/)
+
+### Develop
+
+Se realiza el deploy automático en Heroku por cada push a develop.
+
+[Develop](https://develop-api-weather-web.herokuapp.com/)
+
+## Rutas
+
+### /location
+
+Devuelve en formato JSON los datos de la ubicación de acuerdo a la IP pública del cliente.
+
+### /current[/city]
+
+City es opcional.
+
+Si se le pasa una ciudad como parámetro:
+- Devuelve datos del clima actual respecto a al ciudad ingresada como parámetro.
+Sino:
+- Devuelve los datos de ubicación actual y el estado del tiempo actual eb base a la IP del cliente.
+
+### /forecast[/city]
+
+City es opcional.
+
+Si se le pasa una ciudad como parámetro:
+- Devuelve en formato JSON los datos de la ubicación en base a la IP del cliente y el estado del tiempo a 5 días.
+Sino:
+- Devuelve en formato JSON los datos de la ubicación en base a la ciudad ingresada y el estado del tiempo a 5 días.
 
 
 ## Ejecutando las pruebas ⚙️
