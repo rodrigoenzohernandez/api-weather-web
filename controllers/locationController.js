@@ -9,15 +9,17 @@ const controller = {
             (async () => {
                 console.log(await publicIp.v4());
                 //=> '46.5.21.123'
+
+                let cityData = geoip.lookup(publicIp.v4());
+                return res.json(cityData);
              
-                console.log(await publicIp.v6());
+                //console.log(await publicIp.v6());
                 //=> 'fe80::200:f8ff:fe21:67cf'
             })();
 
 
 
-            let cityData = geoip.lookup(publicIp.v4());
-            return res.json(cityData);
+
         }
         catch (err) {
             console.log(err);
