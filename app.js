@@ -29,7 +29,7 @@ app.decorate('notFound', (request, reply) => {
 
 const start = async () => {
   try {
-    await app.listen(PORT)
+    await app.listen(PORT, '0.0.0.0')
     app.log.info(`server listening on ${app.server.address().port}`)
   } catch (err) {
     app.log.error(err)
