@@ -1,13 +1,38 @@
-var express = require('express');
-var router = express.Router();
-
 const indexController = require("../controllers/indexController");
 const locationController = require("../controllers/locationController");
 const weatherController = require("../controllers/weatherController");
 
-router.get('/', indexController.showIndex);
-router.get('/location', locationController.showLocation);
-router.get('/current/:city?', weatherController.showCurrent);
-router.get('/forecast/:city?', weatherController.showForecast);
-
-module.exports = router;
+const routes =
+    [
+        {
+            method: 'GET',
+            url: '/',
+            handler: indexController.showIndex
+        },
+        {
+            method: 'GET',
+            url: '/location',
+            handler: locationController.showLocation
+        },
+        {
+            method: 'GET',
+            url: '/current/:city',
+            handler: weatherController.showCurrent
+        },
+        {
+            method: 'GET',
+            url: '/current',
+            handler: weatherController.showCurrent
+        },
+        {
+            method: 'GET',
+            url: '/forecast/:city',
+            handler: weatherController.showForecast
+        },
+        {
+            method: 'GET',
+            url: '/forecast',
+            handler: weatherController.showForecast
+        }
+    ]
+module.exports = routes;

@@ -1,7 +1,7 @@
-const controller = {
-    showIndex: async function (req, res) {
-        res.render('index');
-    }
+exports.showIndex = async (req, res) => {
+  try {
+    res.view('/views/index.ejs', { text: 'text' })
+  } catch (err) {
+    console.log(err)
+  }
 }
-
-module.exports = controller;
